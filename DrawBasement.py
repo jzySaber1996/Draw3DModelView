@@ -117,13 +117,23 @@ def draw_all_layers_main(dict_store):
     ax = fig.gca(projection='3d')
     ax.set_title("3D Model")
     for i in range(len(draw_x_list_perimeter)):
-        listx = draw_x_list_perimeter[i]
-        listy = draw_y_list_perimeter[i]
-        listz = draw_z_list_perimeter[i]
-        ax.plot(listx, listy, listz, 'red')
-    for i in range(len(draw_x_list_infill)):
-        listx = draw_x_list_infill[i]
-        listy = draw_y_list_infill[i]
-        listz = draw_z_list_infill[i]
-        ax.plot(listx, listy, listz, 'aqua')
+        list_x = draw_x_list_perimeter[i]
+        list_y = draw_y_list_perimeter[i]
+        list_z = draw_z_list_perimeter[i]
+        ax.plot(list_x, list_y, list_z, 'blue')
+    # for i in range(len(draw_x_list_infill)):
+    #     list_x = draw_x_list_infill[i]
+    #     list_y = draw_y_list_infill[i]
+    #     list_z = draw_z_list_infill[i]
+    #     ax.plot(list_x, list_y, list_z, 'white')
+    i = 0
+    list_x = draw_x_list_infill[i]
+    list_y = draw_y_list_infill[i]
+    list_z = draw_z_list_infill[i]
+    ax.plot(list_x, list_y, list_z, 'aqua')
+    i = len(draw_x_list_infill) - 1
+    list_x = draw_x_list_infill[i]
+    list_y = draw_y_list_infill[i]
+    list_z = draw_z_list_infill[i]
+    ax.plot(list_x, list_y, list_z, 'aqua')
     plt.show()
